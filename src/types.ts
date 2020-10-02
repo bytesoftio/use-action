@@ -1,4 +1,4 @@
-export type  Action<TResult, TArgs extends any[]> = (...args: TArgs) => Promise<TResult | undefined> | (TResult | undefined)
+export type  Action<TResult, TArgs extends any[]> = (...args: TArgs) => Promise<TResult | undefined>
 
 
 export type ActionHandle<TResult, TActionArgs extends any[]> = {

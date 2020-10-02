@@ -6,7 +6,7 @@ export const useAction: UseAction = <TResult, TActionArgs extends any[]>(
 ) => {
   const handle = useAsync<TResult>()
 
-  const run: Action<TResult, TActionArgs> = (...args) => {
+  const run: Action<TResult, TActionArgs> = async (...args) => {
     return handle.reload(() => {
       return action(...args)
     })
