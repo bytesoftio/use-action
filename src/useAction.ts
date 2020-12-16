@@ -13,7 +13,7 @@ export const useAction: UseAction = <TResult, TActionArgs extends any[]>(
   }
 
   return {
-    loading: handle.loading,
+    running: handle.loading,
     errored: handle.errored,
     error: handle.error,
     result: handle.result,

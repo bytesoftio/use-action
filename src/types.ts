@@ -3,7 +3,7 @@ export type  Action<TResult, TArgs extends any[]> = (...args: TArgs) => Promise<
 
 export type ActionHandle<TResult, TActionArgs extends any[]> = {
   result: TResult | undefined;
-  loading: boolean;
+  running: boolean;
   errored: boolean;
   error: any | undefined;
   run: Action<TResult, TActionArgs>;

@@ -18,7 +18,7 @@
 
 ## Description
 
-This package is built on top of [@bytesoftio/use-async](https://github.com/bytesoftio/use-async). The purpose of this package is to be able to encapsulate any async operation into a standardized handle that can be run on demand and awaited. Example use case: You have an async operation, like send some data to an endpoint, you create an async action and trigger it when the time is right. You don't have to worry about state related things like loading, result, error handling, etc. It's all available for you within the handle.
+This package is built on top of [@bytesoftio/use-async](https://github.com/bytesoftio/use-async). The purpose of this package is to be able to encapsulate any async operation into a standardized handle that can be run on demand and awaited. Example use case: You have an async operation, like send some data to an endpoint, you create an async action and trigger it when the time is right. You don't have to worry about state related things like running, result, error handling, etc. It's all available for you within the handle.
 
 ## Usage
 
@@ -36,7 +36,7 @@ const LikeButton = () => {
   }) 
   
   const onClick = async () => {
-    if ( ! likeAction.loading) {
+    if ( ! likeAction.running) {
       await likeAction.run(likesCount)
      
       if ( ! likeAction.error) {

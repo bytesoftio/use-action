@@ -27,7 +27,7 @@ describe("useAction", () => {
     const target = () => wrapper.find("h1")
 
     expect(renders).toBe(1)
-    expect(receivedAction!.loading).toBe(false)
+    expect(receivedAction!.running).toBe(false)
     expect(receivedAction!.errored).toBe(false)
     expect(receivedAction!.error).toBe(undefined)
     expect(receivedAction!.result).toBe(undefined)
@@ -38,7 +38,7 @@ describe("useAction", () => {
     })
 
     expect(renders).toBe(2)
-    expect(receivedAction!.loading).toBe(true)
+    expect(receivedAction!.running).toBe(true)
     expect(receivedAction!.errored).toBe(false)
     expect(receivedAction!.error).toBe(undefined)
     expect(receivedAction!.result).toBe(undefined)
@@ -49,7 +49,7 @@ describe("useAction", () => {
     })
 
     expect(renders).toBe(3)
-    expect(receivedAction!.loading).toBe(false)
+    expect(receivedAction!.running).toBe(false)
     expect(receivedAction!.errored).toBe(false)
     expect(receivedAction!.error).toBe(undefined)
     expect(receivedAction!.result).toBe("result 1 a")
@@ -61,7 +61,7 @@ describe("useAction", () => {
     })
 
     expect(renders).toBe(4)
-    expect(receivedAction!.loading).toBe(true)
+    expect(receivedAction!.running).toBe(true)
     expect(receivedAction!.errored).toBe(false)
     expect(receivedAction!.error).toBe(undefined)
     expect(receivedAction!.result).toBe(undefined)
@@ -72,7 +72,7 @@ describe("useAction", () => {
     })
 
     expect(renders).toBe(5)
-    expect(receivedAction!.loading).toBe(false)
+    expect(receivedAction!.running).toBe(false)
     expect(receivedAction!.errored).toBe(true)
     expect(receivedAction!.error).toBe("reason")
     expect(receivedAction!.result).toBe(undefined)
